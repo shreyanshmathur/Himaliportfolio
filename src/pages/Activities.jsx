@@ -1,13 +1,37 @@
 import { useState, useEffect } from 'react'
 import { useReveal } from '../hooks/useReveal'
-import { logos, activities, certGroups, pageEyebrow, pageTitle, pageKicker } from '../data/activities'
+import { logos, activities, certGroups, pageTitle, pageKicker, flagships, statLabels } from '../data/activities'
+import PageHero from '../components/PageHero'
 import OrgMark from '../components/OrgMark'
 import './Activities.css'
+
+const allCerts = certGroups.flatMap(g => g.certs.map(c => ({ ...c, group: g.heading })))
+const flagshipTitles = new Set(flagships.map(f => f.title))
+const featured = flagships
+  .map(f => {
+    const cert = allCerts.find(c => c.title === f.title)
+    return cert && { ...cert, note: f.note }
+  })
+  .filter(Boolean)
+
+const heroStats = [
+  { num: String(allCerts.length),                          label: statLabels.certs },
+  { num: String(certGroups.length),                        label: statLabels.categories },
+  { num: String(new Set(allCerts.map(c => c.org)).size),   label: statLabels.issuers },
+]
+
+// The category list skips the flagships (they lead the page) and any category left empty.
+const otherGroups = certGroups
+  .map(g => ({ ...g, certs: g.certs.filter(c => !flagshipTitles.has(c.title)) }))
+  .filter(g => g.certs.length > 0)
+
+const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`
 
 export default function Activities() {
   const [openIdx, setOpenIdx] = useState(null)
   const r1 = useReveal()
   const r2 = useReveal()
+  const r3 = useReveal()
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') setOpenIdx(null) }
@@ -21,36 +45,62 @@ export default function Activities() {
 
   const open = openIdx !== null ? activities[openIdx] : null
 
+
   return (
     <>
-    <main className="page-wrap">
+    <main className="page-wrap cr-page">
 
-      {/* ── PAGE HERO ──────────────────────────── */}
-      <div className="page-hero">
-        <div className="container">
-          <div className="ph-top">
-            <span className="eyebrow">{pageEyebrow}</span>
+      {/* ── HERO ───────────────────────────────── */}
+      <PageHero
+        eyebrow="Credentials"
+        title={pageTitle}
+        kicker={pageKicker}
+        stats={heroStats}
+      />
+
+      {/* ── FLAGSHIP CREDENTIALS ───────────────── */}
+      {featured.length > 0 && (
+        <section className="section cr-featured-section" ref={r3}>
+          <div className="container">
+            <div className="cr-head reveal">
+              <span className="eyebrow">Flagship credentials</span>
+              <h2>Quality and process, <em>certified.</em></h2>
+            </div>
+            <div className="cr-featured-grid">
+              {featured.map((c, i) => (
+                <article key={c.title} className={`cr-feature reveal d${i + 1}`}>
+                  <SealIcon className="cr-feature-seal" />
+                  <div className="cr-feature-top">
+                    <span className="cr-feature-mark">
+                      <OrgMark name={c.org} logo={c.logo} mono={c.mono} className="cr-feature-logo" />
+                    </span>
+                    <span className="chip cr-feature-date">{c.date}</span>
+                  </div>
+                  <span className="cr-feature-issuer">{c.org}</span>
+                  <h3 className="cr-feature-title">{c.title}</h3>
+                  {c.note && <p className="cr-feature-note">{c.note}</p>}
+                  <span className="cr-feature-group">{c.group}</span>
+                </article>
+              ))}
+            </div>
           </div>
-          <h1 className="ph-title">{pageTitle[0]}<br /><em>{pageTitle[1]}</em></h1>
-          <p className="ph-kicker">{pageKicker}</p>
-        </div>
-      </div>
+        </section>
+      )}
 
       {/* ── CAMPUS LEADERSHIP (hidden when there are no entries) ── */}
       {activities.length > 0 && (
       <section className="section" ref={r1}>
         <div className="container">
-          <div className="section-head">
-            <div className="reveal">
-              <span className="eyebrow">Campus leadership</span>
-            </div>
-            <h2 className="reveal d2">Where strategy<br /><em>meets the field.</em></h2>
+          <div className="cr-head reveal">
+            <span className="eyebrow">Campus leadership</span>
+            <h2>Where strategy <em>meets the field.</em></h2>
           </div>
           <div className="act-grid">
             {activities.map((a, i) => (
               <button
                 key={i}
-                className={`act-card reveal d${i + 2}`}
+                type="button"
+                className={`act-card reveal d${Math.min(i + 1, 5)}`}
                 onClick={() => setOpenIdx(i)}
               >
                 <div className="act-card-head">
@@ -63,8 +113,8 @@ export default function Activities() {
                     <span className="act-metric-label">{a.metric.label}</span>
                   </div>
                 </div>
-                <h4 className="act-role">{a.role}</h4>
-                <span className="act-period">{a.period}</span>
+                <h3 className="act-role">{a.role}</h3>
+                <span className="chip act-period">{a.period}</span>
                 <ul className="act-bullets">
                   {a.bullets.map((b, j) => <li key={j}>{b}</li>)}
                 </ul>
@@ -76,33 +126,34 @@ export default function Activities() {
       </section>
       )}
 
-      {/* ── CERTIFICATIONS ─────────────────────── */}
-      <section className="section band" ref={r2}>
+      {/* ── CERTIFICATIONS BY CATEGORY ─────────── */}
+      <section className="section cr-all" ref={r2}>
         <div className="container">
-          <div className="section-head">
-            <div className="reveal">
-              <span className="eyebrow">Credentials</span>
-            </div>
-            <h2 className="reveal d2">Certifications<br /><em>by category.</em></h2>
+          <div className="cr-head reveal">
+            <span className="eyebrow">Continued learning</span>
+            <h2>Certifications <em>by category.</em></h2>
           </div>
-          <div className="cert-groups">
-            {certGroups.map((group, gi) => (
-              <div key={gi} className={`cert-group reveal d${gi + 2}`}>
-                <h3 className="cert-group-heading">{group.heading}</h3>
-                <div className="cert-group-grid">
-                  {group.certs.map((c, ci) => (
-                    <div key={ci} className="act-cert-item">
-                      <div className="act-cert-head">
-                        <div className="act-cert-org-row">
-                          <OrgMark name={c.org} logo={c.logo} mono={c.mono} className="act-cert-logo" />
-                          <span className="act-cert-org">{c.org}</span>
-                        </div>
-                        <span className="act-cert-date">{c.date}</span>
-                      </div>
-                      <p className="act-cert-title">{c.title}</p>
-                    </div>
-                  ))}
+          <div className="cr-groups">
+            {otherGroups.map((group) => (
+              <div key={group.heading} className="cr-group reveal" style={{ '--n': Math.min(group.certs.length, 4), '--n3': Math.min(group.certs.length, 3) }}>
+                <div className="cr-group-head">
+                  <h3 className="cr-group-title">{group.heading}</h3>
+                  <span className="chip chip-green cr-count">{plural(group.certs.length, 'certification')}</span>
                 </div>
+                <ul className="cr-grid">
+                  {group.certs.map((c) => (
+                    <li key={c.title} className="cr-card card">
+                      <div className="cr-card-top">
+                        <span className="cr-mark">
+                          <OrgMark name={c.org} logo={c.logo} mono={c.mono} className="cr-logo" />
+                        </span>
+                        <span className="chip cr-date">{c.date}</span>
+                      </div>
+                      <span className="cr-issuer">{c.org}</span>
+                      <h4 className="cr-title">{c.title}</h4>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -157,7 +208,7 @@ export default function Activities() {
                 <article key={j} className="act-panel-highlight">
                   <span className="act-panel-hl-num">0{j + 1}</span>
                   <div className="act-panel-hl-body">
-                    <h4 className="act-panel-hl-title">{h.title}</h4>
+                    <h3 className="act-panel-hl-title">{h.title}</h3>
                     <p className="act-panel-hl-desc">{h.description}</p>
                     <div className="act-panel-hl-outcome">
                       <span className="act-panel-hl-outcome-label">Outcome</span>
@@ -172,12 +223,23 @@ export default function Activities() {
           <div className="act-panel-skills">
             <span className="act-skills-label">Skills</span>
             {open.skills.map(s => (
-              <span key={s} className="tag">{s}</span>
+              <span key={s} className="chip">{s}</span>
             ))}
           </div>
         </div>
       )}
     </aside>
     </>
+  )
+}
+
+function SealIcon({ className }) {
+  return (
+    <svg className={className} width="160" height="160" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="0.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="10" r="7" />
+      <circle cx="12" cy="10" r="4.6" />
+      <path d="M9.8 10.1l1.5 1.5 3-3.1" />
+      <path d="M8 15.8L6.5 22l5.5-2.6 5.5 2.6L16 15.8" />
+    </svg>
   )
 }

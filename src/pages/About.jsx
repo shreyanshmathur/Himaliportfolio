@@ -13,6 +13,7 @@ import OrgMark from '../components/OrgMark'
 import './About.css'
 
 const QUICK_KEYS = ['Role', 'Firm', 'Based']
+const HERO_ONLY = [...QUICK_KEYS, 'Status']
 
 export default function About() {
   const r1 = useReveal()
@@ -23,7 +24,7 @@ export default function About() {
   const r6 = useReveal()
 
   const quick = facts.filter(([k]) => QUICK_KEYS.includes(k))
-  const glance = facts.filter(([k]) => !QUICK_KEYS.includes(k))
+  const glance = facts.filter(([k]) => !HERO_ONLY.includes(k))
   const status = facts.find(([k]) => k === 'Status')?.[1]
 
   return (

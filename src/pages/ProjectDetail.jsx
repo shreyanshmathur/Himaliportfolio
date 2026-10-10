@@ -166,7 +166,7 @@ function CaseStudy({ project }) {
       <div className="cs-body" ref={r1}>
         <div className="container">
           {sections.map((s, i) => (
-            <section key={s.label} className={`cs-section cs-${s.label.toLowerCase()}`} aria-labelledby={`cs-h-${i}`}>
+            <section key={s.label} className={`cs-section cs-sec-${s.label.toLowerCase()}`} aria-labelledby={`cs-h-${i}`}>
               <div className="cs-side" aria-hidden="true">
                 <div className="cs-side-inner">
                   <span className="cs-side-num" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>

@@ -201,7 +201,7 @@
 /* ── CAPABILITIES ───────────────────────────── */
 .ab-cap-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 24px;
 }
 .ab-cap {
@@ -399,6 +399,10 @@
 .ab-write-arrow { font-size: 18px; color: var(--accent); }
 
 /* ── Responsive ─────────────────────────────── */
+@media (max-width: 1200px) {
+  .page-hero .ph-aside:has(.ab-portrait) { flex-basis: 300px; }
+  .ab-cap { padding: 28px; }
+}
 @media (max-width: 1100px) {
   .ab-story-grid { gap: 48px 56px; }
 }
@@ -415,13 +419,14 @@
   .ab-portrait { max-width: 280px; margin: 8px 18px 18px 0; }
   .ab-portrait::before { inset: 18px -18px -18px 18px; }
   .ab-status { left: auto; right: -10px; bottom: 20px; font-size: 13px; }
-  .ab-quick { gap: 8px; }
-  .ab-quick-item { padding: 10px 14px; flex: 1 1 100%; }
+  .ab-quick { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .ab-quick-item { padding: 10px 14px; }
+  .ab-quick-item:first-child { grid-column: 1 / -1; }
   .ab-glance { padding: 24px 20px 8px; }
   .ab-glance-row { grid-template-columns: 1fr; gap: 2px; }
   .ab-cap, .ab-prin, .ab-edu, .ab-quote { padding: 24px; }
   .ab-cap-title, .ab-prin-title { font-size: 28px; }
-  .ab-prose p:first-child { padding-bottom: 20px; }
+  .ab-prose p:first-child { padding-bottom: 20px; font-size: 22px; }
   .ab-teaser { flex-wrap: wrap; padding: 24px; gap: 16px; }
   .ab-teaser-label { font-size: 21px; }
   .ab-teaser-text { flex: 1 1 calc(100% - 72px); }
