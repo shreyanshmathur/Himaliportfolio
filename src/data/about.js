@@ -117,3 +117,15 @@ export const testimonials = []
 // Shape: { title, date, href }.
 // TODO: post URLs.
 export const writing = []
+
+// ── Display copy for the About page layout (restates facts above) ──
+export const storyEyebrow     = 'My story'
+export const glanceHeading    = 'At a glance'
+export const educationHeading = ['Where it', 'started.']
+
+// One line under each capability heading, in the same order as `capabilities`.
+export const capabilityBlurbs = [
+  'Scope, governance and reporting for programmes that run across teams and time zones.',
+  'Procurement, vendors and quality systems, from four years at KassTech Aerospace.',
+  'The stack I run delivery, reporting and automation on.',
+]
