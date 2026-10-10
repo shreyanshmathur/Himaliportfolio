@@ -22,8 +22,9 @@ function span(period) {
   return { start: parseMonth(a), end: parseMonth(b), current: /present/i.test(b) }
 }
 function duration(period) {
+  // Inclusive of both months: "Sep 2024 - Oct 2024" is a two-month internship.
   const { start, end } = span(period)
-  const months = Math.max(1, end - start)
+  const months = Math.max(1, end - start + 1)
   const y = Math.floor(months / 12)
   const m = months % 12
   const parts = []
@@ -270,7 +271,7 @@ export default function Experience() {
 
           <header className="exp-panel-head">
             <div className="exp-panel-firm">
-              <OrgMark name={open.firm} logo={logos[open.firm]} className="exp-logo exp-panel-logo" />
+              <OrgMark name={open.firm} logo={logos[open.firm]} className="exp-logo" />
               <div className="exp-firm-block">
                 <span className="exp-firm">{open.firm}</span>
                 <span className="exp-when">
