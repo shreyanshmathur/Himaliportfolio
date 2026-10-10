@@ -13,6 +13,12 @@ export const hero = {
 // Heading of the capabilities section on About.
 export const identityHeading = ['Operational rigour.', 'Strategic impact.']
 
+// Two result badges floating on the hero portrait (desktop and tablet).
+export const heroBadges = [
+  { num: 'AED 1.7M', label: 'revenue closed in 11 months' },
+  { num: '6+',       label: 'enterprise accounts at once' },
+]
+
 // Results bar under the hero: four numbers, each tied to where it happened.
 export const highlights = [
   { num: 'AED 1.7M', label: 'Revenue closed in 11 months',    sub: 'Coral Wealth Investment, Dubai' },

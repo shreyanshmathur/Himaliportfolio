@@ -3,8 +3,9 @@ import { useReveal } from '../hooks/useReveal'
 import { site } from '../data/site'
 import { clean } from '../lib/content'
 import LetsTalk from '../components/LetsTalk'
+import CountUp from '../components/CountUp'
 import {
-  hero, highlights, companyNames, fitHeading, fit, careerHeading, career,
+  hero, heroBadges, highlights, companyNames, fitHeading, fit, careerHeading, career,
   featured, workSample, credentialHighlights,
 } from '../data/home'
 import { principlesHeading, principles, testimonials, writing } from '../data/about'
@@ -68,7 +69,15 @@ export default function Home() {
           </div>
 
           <figure className="hero-portrait">
-            <img src={site.headshot} alt={`Portrait of ${site.fullName}`} />
+            <div className="hero-photo">
+              <img src={site.headshot} alt={`Portrait of ${site.fullName}`} />
+            </div>
+            {heroBadges.map((b, i) => (
+              <div key={b.num} className={`hero-badge b${i + 1}`} aria-hidden="true">
+                <strong>{b.num}</strong>
+                <span>{b.label}</span>
+              </div>
+            ))}
             <figcaption>
               <span className="a">{site.location}</span>
               <span className="b">Open to relocating to the UAE</span>
@@ -83,7 +92,7 @@ export default function Home() {
           <div className="results-row">
             {highlights.map(h => (
               <div key={h.num} className="res-item">
-                <span className="res-num">{h.num}</span>
+                <CountUp value={h.num} className="res-num" />
                 <span className="res-label">{h.label}</span>
                 <span className="res-sub">{h.sub}</span>
               </div>
@@ -102,6 +111,7 @@ export default function Home() {
           <div className="card-grid">
             {fit.map((f, i) => (
               <div key={f.role} className={`fit-card reveal d${i + 1}`}>
+                <span className="fit-icon">{fitIcons[i]}</span>
                 <span className="card-kicker">{f.role}</span>
                 <h3 className="fit-title">{f.heading}</h3>
                 <ul className="fit-list">
@@ -114,7 +124,7 @@ export default function Home() {
       </section>
 
       {/* ── CAREER ───────────────────────────────── */}
-      <section className="section" ref={r2}>
+      <section className="section band-white" ref={r2}>
         <div className="container">
           <div className="home-head-row reveal">
             <div className="home-head">
@@ -153,7 +163,7 @@ export default function Home() {
                   <span className="work-fits">
                     {f.fits.map(t => <span key={t} className="fit-tag">{t}</span>)}
                   </span>
-                  <span className="work-num">{f.metricNum}</span>
+                  <CountUp value={f.metricNum} className="work-num" />
                   <span className="work-num-label">{f.metricLabel}</span>
                   <span className="work-rule" aria-hidden="true" />
                   <span className="card-kicker muted">{f.client}</span>
@@ -240,6 +250,14 @@ export default function Home() {
     </main>
   )
 }
+
+// Delivery and Operations, Founder's Office, Customer Success
+const iconProps = { width: 26, height: 26, viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round', 'aria-hidden': true }
+const fitIcons = [
+  <svg key="ops" {...iconProps}><path d="M3 12h4l3-8 4 16 3-8h4" /></svg>,
+  <svg key="fo" {...iconProps}><circle cx="12" cy="12" r="9" /><path d="M15.5 8.5l-2 5-5 2 2-5z" /></svg>,
+  <svg key="cs" {...iconProps}><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" /></svg>,
+]
 
 function ArrowIcon() {
   return (

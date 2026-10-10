@@ -13,7 +13,7 @@ Personal portfolio website for Himali Verma. Same codebase and design system as 
 - **React 18** + **Vite 5**
 - **React Router v6** (HashRouter for static deployment)
 - **CSS** only, no UI framework
-- **Google Fonts**: Instrument Serif, DM Sans, JetBrains Mono
+- **Google Fonts**: Instrument Serif, DM Sans
 
 ## Pages
 
