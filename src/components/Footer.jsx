@@ -25,7 +25,7 @@ export default function Footer() {
         <hr className="footer-rule" />
         <div className="footer-bottom">
           <span>© {year} {site.fullName}</span>
-          <span>Set in Instrument Serif + DM Sans</span>
+          <span>{site.location}</span>
         </div>
       </div>
     </footer>

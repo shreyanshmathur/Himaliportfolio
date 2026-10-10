@@ -125,7 +125,7 @@ Senior Project Manager, Founder's Office, Operations Manager and Customer Succes
 
 ## Site Pages
 
-- / — Home: hero, company logos, key metrics ticker, featured projects
+- / — Home: hero with target roles, key results, where I fit, career timeline, featured projects, how I work, credentials, what I'm looking for and contact
 - /#/experience — Six roles with slide-in detail panels for each engagement
 - /#/projects — Ten project case studies with category filters
 - /#/about — Background story, capabilities, education

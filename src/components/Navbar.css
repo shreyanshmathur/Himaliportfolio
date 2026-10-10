@@ -18,22 +18,21 @@
 /* Brand */
 .nav-brand {
   display: flex;
-  align-items: baseline;
-  gap: 14px;
+  flex-direction: column;
+  gap: 4px;
   flex-shrink: 0;
 }
 .nav-brand-name {
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: 26px;
+  line-height: 1;
   letter-spacing: -0.01em;
   color: var(--ink);
 }
 .nav-brand-name em { font-style: italic; }
 .nav-brand-role {
-  font-family: var(--mono);
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
+  font-family: var(--sans);
+  font-size: 13px;
   color: var(--ink-4);
 }
 
@@ -41,61 +40,35 @@
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 32px;
 }
 
 .nav-link {
   font-family: var(--sans);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 500;
   color: var(--ink-3);
-  display: inline-flex;
-  align-items: baseline;
-  gap: 6px;
-  cursor: pointer;
-  transition: color var(--dur) var(--ease);
+  padding: 10px 0;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 .nav-link:hover { color: var(--ink); }
-.nav-link.is-active { color: var(--ink); }
-.nav-link.is-active .nav-num { color: var(--accent); }
+.nav-link.is-active { color: var(--ink); border-bottom-color: var(--accent); }
 
-.nav-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-4);
-  transition: color var(--dur) var(--ease);
-}
-
-.nav-status {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--ink-4);
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: 4px;
-}
-.nav-dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  display: inline-block;
-}
-
-/* CV download */
-.nav-cv {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+/* Contact button */
+.nav-cta {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
   color: var(--ink);
   border: 1px solid var(--ink);
-  padding: 7px 12px;
+  border-radius: 999px;
+  padding: 10px 18px;
   white-space: nowrap;
   transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
 }
-.nav-cv:hover { background: var(--ink); color: var(--paper); }
+.nav-cta:hover,
+.nav-cta.active { background: var(--ink); color: var(--paper); }
 
 @media (max-width: 1100px) {
   .nav-links { gap: 24px; }
@@ -106,10 +79,14 @@
   display: none;
   flex-direction: column;
   gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-right: -12px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
 }
 .nav-ham span {
   display: block;
@@ -163,4 +140,5 @@
   .nav-ham { display: flex; }
   .nav-mobile { display: flex; }
   .nav-brand-role { display: none; }
+  .nav-brand-name { font-size: 24px; }
 }

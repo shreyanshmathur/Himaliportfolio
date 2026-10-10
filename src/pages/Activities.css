@@ -46,7 +46,7 @@
 
 .act-org {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--ink-4);
@@ -63,7 +63,7 @@
 }
 .act-metric-label {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--ink-5);
@@ -83,7 +83,7 @@
 
 .act-period {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-5);
   letter-spacing: 0.06em;
   display: block;
@@ -116,7 +116,7 @@
   display: inline-block;
   margin-top: 18px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-4);
@@ -177,14 +177,14 @@
 }
 .act-cert-org {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--ink-4);
 }
 .act-cert-date {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.06em;
   color: var(--ink-5);
   flex-shrink: 0;
@@ -269,7 +269,7 @@
   gap: 16px;
   align-items: center;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-4);
@@ -316,7 +316,7 @@
   border: 1px solid var(--line);
   padding: 8px 14px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--ink-3);
@@ -336,7 +336,7 @@
 
 .act-panel-section-label {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--ink-4);
@@ -387,7 +387,7 @@
 }
 .act-panel-hl-outcome-label {
   font-family: var(--mono);
-  font-size: 9px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
   color: var(--ink-4);
@@ -410,7 +410,7 @@
 }
 .act-skills-label {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--ink-4);

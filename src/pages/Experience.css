@@ -49,14 +49,14 @@
 }
 .exp-firm {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-4);
 }
 .exp-type {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--accent);
@@ -78,7 +78,7 @@
 }
 .exp-period {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-4);
   letter-spacing: 0.04em;
 }
@@ -118,7 +118,7 @@
 }
 .exp-metric-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--ink-4);
@@ -196,7 +196,7 @@
   display: flex;
   gap: 16px;
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-4);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -234,7 +234,7 @@
 }
 .exp-panel-close {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--ink-4);
@@ -261,7 +261,7 @@
 
 .exp-panel-section-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.18em;
   color: var(--ink-4);
@@ -281,7 +281,7 @@
 }
 .exp-panel-eng-num {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-4);
   letter-spacing: 0.04em;
   padding-top: 4px;
@@ -302,7 +302,7 @@
 }
 .exp-panel-eng-client {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   color: var(--ink-4);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -324,7 +324,7 @@
 }
 .exp-panel-eng-outcome-label {
   font-family: var(--mono);
-  font-size: 10px;
+  font-size: 12px;
   color: var(--accent);
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -347,7 +347,7 @@
 }
 .exp-tools-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.14em;
   color: var(--ink-4);
@@ -367,14 +367,14 @@
 }
 .exp-teaser-label {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-4);
 }
 .exp-teaser-link {
   font-family: var(--mono);
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--accent);

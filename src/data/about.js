@@ -2,10 +2,9 @@
 // About page content.
 // ─────────────────────────────────────────────────────────────────────
 import { site } from './site'
-import { hero } from './home'
 
 export const aboutHero = {
-  title:  hero.headline,
+  title:  [site.firstName, `${site.lastName}.`],
   kicker: 'Aerospace engineer turned delivery lead. Procurement portfolios, cross-border client programmes, enterprise AI accounts, and the reporting that proves they landed.',
 }
 
