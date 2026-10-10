@@ -513,6 +513,10 @@
 .home-quote figcaption { font-size: 15px; color: var(--ink-3); }
 
 /* ── Responsive ──────────────────────────────── */
+@media (max-width: 1100px) {
+  .hero-badge.b2 { right: 16px; top: 24px; }
+}
+
 @media (max-width: 960px) {
   .hero { padding: 64px 0 72px; }
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
