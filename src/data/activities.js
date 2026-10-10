@@ -29,13 +29,12 @@ export const activities = []
 // }
 
 // Certifications grouped by category. `logo: null` shows a monogram tile (`mono` overrides it).
-// TODO: logos for SGS and the International Six Sigma Institute.
 export const certGroups = [
   {
     heading: 'Quality and process',
     certs: [
-      { org: 'SGS',                               title: 'ISO 9001:2015 Lead Auditor',          date: 'Oct 2021', logo: null },
-      { org: 'International Six Sigma Institute', title: 'Six Sigma Green Belt (CSSGB)',        date: 'Sep 2025', logo: null, mono: '6σ' },
+      { org: 'SGS',                               title: 'ISO 9001:2015 Lead Auditor',          date: 'Oct 2021', logo: '/logos/sgs.svg' },
+      { org: 'International Six Sigma Institute', title: 'Six Sigma Green Belt (CSSGB)',        date: 'Sep 2025', logo: '/logos/sixsigma.png' },
     ],
   },
   {

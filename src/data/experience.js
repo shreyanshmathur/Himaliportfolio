@@ -6,13 +6,12 @@
 // ─────────────────────────────────────────────────────────────────────
 
 // Logo per organisation, keyed by the exact `firm` string used below. null shows a monogram tile.
-// TODO: logos for Coral Wealth, SPANCOM and Gulf Well Solutions.
 export const logos = {
   'TrueFan AI':              '/logos/truefan.png',
-  'Coral Wealth Investment': null,
+  'Coral Wealth Investment': '/logos/coralwealth.png',
   'KassTech Aerospace':      '/logos/kasstech.png',
-  'SPANCOM':                 null,
-  'Gulf Well Solutions':     null,
+  'SPANCOM':                 '/logos/spancom.png',
+  'Gulf Well Solutions':     '/logos/gulfwell.png',
   'Sharaf DG':               '/logos/sharafdg.png',
 }
 
