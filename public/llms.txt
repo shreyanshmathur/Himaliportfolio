@@ -1,0 +1,133 @@
+# Himali Verma
+
+> Project Delivery Manager at TrueFan AI. Runs complex, multi-stakeholder delivery across aerospace, investment consulting and enterprise AI. Based in Gurugram, India.
+
+Himali Verma is a project and operations professional currently working as Project Delivery Manager at TrueFan AI, a Series A enterprise AI video company in Gurugram. She trained as an aerospace engineer (B.Tech, UPES, 2021), spent four years running procurement, tendering, sales operations and marketing at KassTech Aerospace, completed an MBA in Operations Management at IMT Dubai (2024), and ran cross-border client delivery at Coral Wealth Investment in Dubai before returning to India in 2026. She is a Six Sigma Green Belt and an SGS-certified ISO 9001:2015 Lead Auditor.
+
+## Contact
+
+- Email: himaliheer@gmail.com
+- LinkedIn: https://www.linkedin.com/in/himaliverma/
+- Portfolio: https://himaliverma.netlify.app
+- CV (PDF): https://himaliverma.netlify.app/Himali-Verma-CV.pdf
+
+## Open To
+
+Senior Project Manager, Founder's Office, Operations Manager and Customer Success Manager roles in consulting, fintech or technology. Based in Gurugram, India; open to relocating, including to the UAE.
+
+## Current Role
+
+**Project Delivery Manager, TrueFan AI, Gurugram** (Apr 2026 – Present)
+
+- Runs delivery for 6+ enterprise accounts at once across BFSI, paints, building materials, NBFC and home lifestyle, with no missed deadlines
+- First point of contact between the founding team and clients; turns complex briefs into execution plans and coordinates cross-functional delivery through completion
+- Single point of accountability per account from kickoff to execution
+
+## Work Experience
+
+**Coral Wealth Investment, Dubai: Project & Operations Manager** (Jan 2025 – Dec 2025)
+- Managed cross-border client delivery for 1,000+ clients, running 3 programmes at once from scoping through delivery and final reporting
+- Coordinated 5 cross-functional teams across 3 time zones; 100% of projects on time and within budget over 12 months; 100% SLA adherence
+- Delivered AED 1.7M in revenue within 11 months through business development alongside delivery
+- Introduced Power BI dashboards that improved client retention by 25% and gave C-suite leadership real-time visibility
+
+**KassTech Aerospace, Gurugram: Manager, Applications** (Jan 2021 – Jan 2025)
+- Directed a procurement and operations portfolio worth ₹20 Cr+ across aviation and aerospace projects
+- Managed 35+ vendors and OEM suppliers, including 5+ government agencies, with 100% on-time delivery
+- Cut operational cycle time by 70% through Salesforce CRM workflow automation and process redesign
+- Implemented and audited the ISO 9001:2015 quality management system as an SGS-certified Lead Auditor
+- Led government tender bidding end to end; ran the website, SEO, SEM, PPC, email and social campaigns and exhibition stalls
+
+**SPANCOM, Dubai: Administrative Manager, Intern** (Sep 2024 – Oct 2024)
+- Coordinated daily task tracking and cross-team communication; supported FTA VAT and corporate tax documentation; reported directly to the CEO
+
+**Gulf Well Solutions, Dubai (remote): Digital Marketing Intern** (Apr 2024 – Aug 2024)
+- SEO-optimised technical content: LinkedIn engagement up 15% (1,040 to 1,196 interactions a month), reposts up 1,050%, product page visits up 28%, inbound inquiries up 35%
+- 45+ content assets delivered on time
+
+**Sharaf DG, Energy Division, Dubai: Project Coordinator Intern** (Nov 2023 – Feb 2024)
+- Supported Provisional Acceptance Certification submissions and closeout documentation for UAE government projects
+
+## Projects
+
+**01. Six enterprise AI video accounts in parallel**
+- Type: Delivery | Client: TrueFan AI enterprise clients (names withheld)
+- Impact: 6+ enterprise accounts run at once; no missed deadlines since April 2026
+
+**02. Cross-border delivery for 1,000+ clients**
+- Type: Delivery | Client: Coral Wealth Investment
+- Stack: Power BI, CRM, Excel
+- Impact: AED 1.7M revenue in 11 months; 1,000+ clients across 3 programmes; 100% SLA adherence
+
+**03. Power BI dashboards for leadership**
+- Type: Reporting and AI | Client: Coral Wealth Investment
+- Stack: Power BI, CRM data, Excel
+- Impact: client retention up 25%; real-time C-suite visibility
+
+**04. Salesforce automation in aerospace procurement**
+- Type: Operations | Client: KassTech Aerospace
+- Stack: Salesforce, MIS dashboards, Advanced Excel
+- Impact: operational cycle time reduced by 70%
+
+**05. ₹20 Cr+ procurement and vendor portfolio**
+- Type: Operations | Client: KassTech Aerospace
+- Impact: 35+ vendors including 5+ government agencies; 100% on-time delivery over four years
+
+**06. ISO 9001:2015 quality management system**
+- Type: Operations | Client: KassTech Aerospace
+- Summary: implemented and audited the QMS as an SGS-certified Lead Auditor
+
+**07. Government tender bidding**
+- Type: Operations | Client: KassTech Aerospace
+- Summary: end-to-end bid management from tender evaluation to contract
+
+**08. Trade shows and digital marketing for an aerospace distributor**
+- Type: Marketing and Growth | Client: KassTech Aerospace
+- Stack: Google Analytics, SEO tools, Wix, Canva
+
+**09. SEO-led technical content on LinkedIn**
+- Type: Marketing and Growth | Client: Gulf Well Solutions
+- Impact: inbound inquiries up 35%; LinkedIn engagement up 15%; reposts up 1,050%; product page visits up 28%
+
+**10. AI-assisted PMO workflow**
+- Type: Reporting and AI | Client: own working method
+- Stack: Claude, ChatGPT, Jira, Asana, Power BI, Salesforce
+- Summary: live project data in, risk flags and drafted status reports out, every output reviewed before it goes anywhere
+
+## Education
+
+- MBA, Operations Management, Institute of Management Technology (IMT), Dubai (2023 – 2024)
+- MicroMasters, Business Management, Indian Institute of Management Bangalore (IIMBx, via edX) (2022 – 2023)
+- B.Tech, Aerospace Engineering (Avionics), University of Petroleum and Energy Studies (UPES), Dehradun (2017 – 2021)
+
+## Certifications
+
+- SGS: ISO 9001:2015 Lead Auditor (Oct 2021)
+- International Six Sigma Institute: Six Sigma Green Belt, CSSGB (Sep 2025)
+- IIMBx / edX: MicroMasters in Business Management (Feb 2023)
+- edX: Operations Management (Feb 2023)
+- edX: Strategic Management (Nov 2022)
+- edX: Corporate Finance (Sep 2022)
+- edX: Accounting for Decision-Making (Jul 2022)
+- edX: Marketing Management (Jun 2022)
+- edX: People Management (Mar 2022)
+- Atlassian: Jira Fundamentals Badge (Jun 2022)
+- Harvard University Online: Digital Marketing Strategy (2021)
+- Coursera: Marketing in a Digital World (2020)
+
+## Core Skills
+
+**Delivery:** project and programme delivery, scope and milestone definition, risk frameworks, budgeting and cost control, cross-functional team coordination, executive reporting and governance reviews
+
+**Operations:** procurement and vendor management, tendering and bid management, ISO 9001:2015 quality systems, Six Sigma process improvement, SLA and service governance
+
+**Tools and AI:** Salesforce administration and workflow automation, Power BI and MIS dashboards, Jira, Trello, Asana, Advanced Excel, ChatGPT, Claude, Gemini, Copilot
+
+## Site Pages
+
+- / — Home: hero, company logos, key metrics ticker, featured projects
+- /#/experience — Six roles with slide-in detail panels for each engagement
+- /#/projects — Ten project case studies with category filters
+- /#/about — Background story, capabilities, education
+- /#/activities — Certifications grouped by category
+- /#/contact — Contact links

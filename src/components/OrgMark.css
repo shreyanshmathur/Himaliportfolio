@@ -1,0 +1,41 @@
+/* Monogram tile: stands in for a logo we don't have. */
+.org-mono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--accent);
+  background: var(--accent-quiet);
+  border: 1px solid rgba(31, 78, 95, 0.18);
+  border-radius: 3px;
+  user-select: none;
+}
+.exp-firm-logo.org-mono  { width: 20px; height: 20px; font-size: 10.5px; }
+.exp-panel-logo.org-mono { width: 28px; height: 28px; font-size: 14px; }
+.act-cert-logo.org-mono  { width: 16px; height: 16px; font-size: 8.5px; border-radius: 2px; }
+.act-logo.org-mono,
+.act-panel-logo.org-mono { width: 24px; height: 24px; font-size: 12px; }
+.edu-logo.org-mono       { width: 48px; height: 48px; font-size: 20px; border-radius: 4px; }
+
+/* Wordmark: the organisation's name, for the hero logo row. */
+.org-word {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  white-space: nowrap;
+}
+.hero-logo.org-word {
+  height: auto;
+  max-width: none;
+  filter: none;
+  opacity: 0.8;
+}
+.hero-logo.org-word:hover { opacity: 1; color: var(--ink-2); }

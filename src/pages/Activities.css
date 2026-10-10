@@ -1,0 +1,430 @@
+/* ── ACTIVITY CARDS ─────────────────────────── */
+.act-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.act-card {
+  background: var(--paper-2);
+  padding: 28px 24px 24px;
+  text-align: left;
+  border: 0;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+
+.act-card:hover { background: var(--paper-3); }
+.act-card:hover .act-role { color: var(--accent); }
+.act-card:hover .act-toggle { color: var(--accent); }
+
+.act-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.act-firm-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.act-logo {
+  height: 28px;
+  width: auto;
+  max-width: 32px;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.act-org {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-4);
+}
+
+.act-metric { text-align: right; flex-shrink: 0; }
+.act-metric-num {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.act-metric-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-5);
+  display: block;
+  margin-top: 2px;
+}
+
+.act-role {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink);
+  margin: 0 0 6px;
+  font-weight: 400;
+  transition: color var(--dur) var(--ease);
+}
+
+.act-period {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-5);
+  letter-spacing: 0.06em;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.act-bullets {
+  margin: 0; padding: 0; list-style: none;
+  display: flex; flex-direction: column; gap: 7px;
+  flex: 1;
+}
+.act-bullets li {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  padding-left: 14px;
+  position: relative;
+}
+.act-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 1px;
+  background: var(--ink-4);
+}
+
+.act-toggle {
+  display: inline-block;
+  margin-top: 18px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  transition: color var(--dur) var(--ease);
+}
+
+/* ── CERTIFICATIONS (grouped) ────────────────── */
+.cert-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.cert-group-heading {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-style: italic;
+  color: var(--ink-3);
+  font-weight: 400;
+  margin: 0 0 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.cert-group-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.act-cert-item {
+  background: var(--paper-2);
+  padding: 22px 20px;
+  transition: background var(--dur) var(--ease);
+}
+.act-cert-item:hover { background: var(--paper-3); }
+
+.act-cert-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.act-cert-org-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.act-cert-logo {
+  height: 16px;
+  width: auto;
+  max-width: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+.act-cert-org {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink-4);
+}
+.act-cert-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--ink-5);
+  flex-shrink: 0;
+}
+.act-cert-title {
+  font-family: var(--serif);
+  font-size: 17px;
+  color: var(--ink);
+  margin: 8px 0 0;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+/* ── PAGE TEASER LINK ────────────────────────── */
+.page-teaser {
+  padding: 40px 0;
+  border-top: 1px solid var(--line);
+  margin-top: 8px;
+}
+.page-teaser-link {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: gap var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.page-teaser-link:hover { gap: 14px; }
+
+/* ── BACKDROP ────────────────────────────────── */
+.act-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 22, 38, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s var(--ease);
+  z-index: 90;
+}
+.act-backdrop.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* ── SIDE PANEL ─────────────────────────────── */
+.act-panel {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: 720px;
+  max-width: 100vw;
+  background: var(--paper);
+  border-left: 1px solid var(--line);
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.35s var(--ease);
+  z-index: 100;
+}
+.act-panel.open { transform: translateX(0); }
+
+.act-panel-inner {
+  padding: 48px 48px 80px;
+}
+
+.act-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--line);
+}
+
+.act-panel-title-block { flex: 1; min-width: 0; }
+
+.act-panel-meta-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 10px;
+}
+
+.act-panel-role {
+  font-family: var(--serif);
+  font-size: clamp(26px, 3.2vw, 40px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 14px;
+}
+
+.act-panel-org-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.act-panel-logo {
+  height: 24px;
+  width: auto;
+  max-width: 28px;
+  object-fit: contain;
+  border-radius: 3px;
+}
+.act-panel-org-name {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+.act-panel-period {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--ink-4);
+  letter-spacing: 0.06em;
+}
+
+.act-panel-close {
+  background: none;
+  border: 1px solid var(--line);
+  padding: 8px 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.act-panel-close:hover { border-color: var(--ink); color: var(--ink); }
+
+.act-panel-context {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin: 0 0 36px;
+}
+
+.act-panel-section-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-4);
+  margin-bottom: 20px;
+}
+
+.act-panel-highlights {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--line);
+}
+
+.act-panel-highlight {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 24px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.act-panel-hl-num {
+  font-family: var(--serif);
+  font-size: 13px;
+  color: var(--ink-5);
+  font-style: italic;
+  padding-top: 3px;
+}
+
+.act-panel-hl-title {
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+
+.act-panel-hl-desc {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0 0 14px;
+}
+
+.act-panel-hl-outcome {
+  background: var(--paper-3);
+  border-left: 2px solid var(--accent);
+  padding: 10px 14px;
+}
+.act-panel-hl-outcome-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--ink-4);
+  display: block;
+  margin-bottom: 4px;
+}
+.act-panel-hl-outcome-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.act-panel-skills {
+  margin-top: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.act-skills-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink-4);
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+/* ── Responsive ──────────────────────────────── */
+@media (max-width: 960px) {
+  .act-grid { grid-template-columns: 1fr; }
+  .act-panel { width: 100%; }
+  .act-panel-inner { padding: 32px 24px 60px; }
+  .cert-group-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .cert-group-grid { grid-template-columns: 1fr; }
+}
