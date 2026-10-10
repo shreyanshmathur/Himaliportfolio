@@ -1,6 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────
 // Project case studies. Each entry is a row on /projects and its own page at /projects/<slug>.
-// `role` (optional) states her part in the work and shows in the case-study stripe.
+// `role` (optional) states her part in the work and shows in the case-study key facts.
+// `org` is the organisation the work was done at (null for her own method); it feeds the
+// "organisations" count in the /projects header.
 // Filter chips come from the distinct `kind` values.
 // ─────────────────────────────────────────────────────────────────────
 
@@ -14,6 +16,7 @@ export const projects = [
     title: 'Six enterprise AI video accounts in parallel',
     kind: 'Delivery',
     client: 'TrueFan AI enterprise clients (names withheld)',
+    org: 'TrueFan AI',
     role: 'Project Delivery Manager; single point of accountability per account',
     blurb: 'One delivery owner for 6+ enterprise accounts across five sectors.',
     impact: '6+',
@@ -43,6 +46,7 @@ export const projects = [
     title: 'Cross-border delivery for 1,000+ clients',
     kind: 'Delivery',
     client: 'Coral Wealth Investment',
+    org: 'Coral Wealth Investment',
     role: 'Project & Operations Manager; owned scope, governance and reporting',
     blurb: 'Three client programmes across four countries, run to one governance model.',
     impact: 'AED 1.7M',
@@ -74,6 +78,7 @@ export const projects = [
     title: 'Power BI dashboards for leadership',
     kind: 'Reporting and AI',
     client: 'Coral Wealth Investment',
+    org: 'Coral Wealth Investment',
     role: 'Built and owned the dashboards; ran the governance reviews',
     blurb: 'Real-time delivery, spend and risk visibility for the C-suite.',
     impact: '25%',
@@ -100,6 +105,7 @@ export const projects = [
     title: 'Salesforce automation in aerospace procurement',
     kind: 'Operations',
     client: 'KassTech Aerospace',
+    org: 'KassTech Aerospace',
     role: 'Salesforce administrator and process owner',
     blurb: 'Redesigned the operating process and automated it in Salesforce.',
     impact: '70%',
@@ -126,6 +132,7 @@ export const projects = [
     title: '₹20 Cr+ procurement and vendor portfolio',
     kind: 'Operations',
     client: 'KassTech Aerospace',
+    org: 'KassTech Aerospace',
     role: 'Portfolio owner; procurement, vendors and OEM relationships',
     blurb: 'Four years of aviation procurement across government and private vendors.',
     impact: '35+',
@@ -155,6 +162,7 @@ export const projects = [
     title: 'ISO 9001:2015 quality management system',
     kind: 'Operations',
     client: 'KassTech Aerospace',
+    org: 'KassTech Aerospace',
     role: 'QMS owner and internal auditor (SGS-certified Lead Auditor)',
     blurb: "Implemented and audited the company's QMS as an SGS-certified Lead Auditor.",
     impact: 'ISO 9001',
@@ -179,6 +187,7 @@ export const projects = [
     title: 'Government tender bidding',
     kind: 'Operations',
     client: 'KassTech Aerospace',
+    org: 'KassTech Aerospace',
     role: 'Bid lead, end to end',
     blurb: 'End-to-end bidding for government tenders.',
     impact: 'End-to-end',
@@ -206,6 +215,7 @@ export const projects = [
     title: 'Trade shows and digital marketing for an aerospace distributor',
     kind: 'Marketing and Growth',
     client: 'KassTech Aerospace',
+    org: 'KassTech Aerospace',
     role: 'Marketing and exhibitions lead, alongside procurement',
     blurb: 'Exhibition presence and digital campaigns in support of business development.',
     impact: '10+',
@@ -234,6 +244,7 @@ export const projects = [
     title: 'SEO-led technical content on LinkedIn',
     kind: 'Marketing and Growth',
     client: 'Gulf Well Solutions',
+    org: 'Gulf Well Solutions',
     role: 'Content lead (internship)',
     blurb: 'Technical content that raised engagement, page visits and inbound inquiries.',
     impact: '+35%',
@@ -261,6 +272,7 @@ export const projects = [
     title: 'AI-assisted PMO workflow',
     kind: 'Reporting and AI',
     client: 'Own working method',
+    org: null,
     role: 'Designed and runs the workflow',
     blurb: 'Live project data in, risk flags and status reports out.',
     impact: 'Daily',

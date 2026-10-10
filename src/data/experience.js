@@ -6,18 +6,30 @@
 // ─────────────────────────────────────────────────────────────────────
 
 // Logo per organisation, keyed by the exact `firm` string used below. null shows a monogram tile.
-// TODO: logos for Coral Wealth, SPANCOM and Gulf Well Solutions.
 export const logos = {
   'TrueFan AI':              '/logos/truefan.png',
-  'Coral Wealth Investment': null,
+  'Coral Wealth Investment': '/logos/coralwealth.png',
   'KassTech Aerospace':      '/logos/kasstech.png',
-  'SPANCOM':                 null,
-  'Gulf Well Solutions':     null,
+  'SPANCOM':                 '/logos/spancom.png',
+  'Gulf Well Solutions':     '/logos/gulfwell.png',
   'Sharaf DG':               '/logos/sharafdg.png',
 }
 
 // One sentence under the page title.
 export const pageKicker = 'Aerospace, investment consulting and enterprise AI, across India and the UAE. One thread: scope it, govern it, deliver it on time, and put the numbers in front of leadership.'
+
+// Page display copy. Restates facts already on this page; counts such as years,
+// organisations and full-time roles are computed from `experiences` in Experience.jsx.
+export const overview = {
+  title:     ['Six roles.', 'One consistent thread.'],
+  countries: { num: '2', label: 'countries: India and the UAE' },
+  onTime:    { num: '100%', label: 'on-time delivery at Coral Wealth and KassTech' },
+  timelineHeading:    ['Full-time roles,', 'most recent first.'],
+  timelineNote:       'Open any role for the context, the engagements behind it, their outcomes and the tools used.',
+  internshipsHeading: ['Earlier:', 'internships during the MBA in Dubai.'],
+  credLabel:   'Credentials',
+  credHeading: ['Certified in the method,', 'not only the job.'],
+}
 
 // Strip above the footer that links to the Credentials page.
 export const teaser = {

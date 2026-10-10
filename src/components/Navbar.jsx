@@ -4,11 +4,10 @@ import { site } from '../data/site'
 import './Navbar.css'
 
 const links = [
-  { num: '01', to: '/experience',  label: 'Experience' },
-  { num: '02', to: '/projects',    label: 'Projects' },
-  { num: '03', to: '/about',       label: 'About' },
-  { num: '04', to: '/activities',  label: 'Credentials' },
-  { num: '05', to: '/contact',     label: 'Contact' },
+  { to: '/experience',  label: 'Experience' },
+  { to: '/projects',    label: 'Projects' },
+  { to: '/about',       label: 'About' },
+  { to: '/activities',  label: 'Credentials' },
 ]
 
 export default function Navbar() {
@@ -33,19 +32,17 @@ export default function Navbar() {
               to={l.to}
               className={({ isActive }) => `nav-link${isActive ? ' is-active' : ''}`}
             >
-              <span className="nav-num">{l.num}</span>
-              <span>{l.label}</span>
+              {l.label}
             </NavLink>
           ))}
-          {site.cv && (
-            <a href={site.cv} className="nav-cv" download="Himali-Verma-CV.pdf">CV ↓</a>
-          )}
+          <NavLink to="/contact" className="nav-cta">Contact me</NavLink>
         </nav>
 
         <button
           className={`nav-ham${menuOpen ? ' open' : ''}`}
           onClick={() => setMenuOpen(v => !v)}
-          aria-label="Toggle menu"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
         >
           <span /><span /><span />
         </button>
@@ -59,9 +56,9 @@ export default function Navbar() {
         {site.cv && (
           <a href={site.cv} className="nav-mob-link" download="Himali-Verma-CV.pdf">Download CV ↓</a>
         )}
-        <a href={`mailto:${site.email}`} className="nav-mob-cta">
-          Get in touch ↗
-        </a>
+        <NavLink to="/contact" className="nav-mob-cta">
+          Contact me ↗
+        </NavLink>
       </div>
     </header>
   )

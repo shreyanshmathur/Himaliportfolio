@@ -3,108 +3,129 @@
 // ─────────────────────────────────────────────────────────────────────
 import { site } from './site'
 
-// Hero block. The headline is two lines; the second renders in italic serif.
+// Hero block. The label line sits above the headline; the headline's second part renders in italic serif.
 export const hero = {
-  eyebrow:  `${site.role} · ${site.firm} · ${site.city}`,
-  headline: ['The operator', 'who delivers.'],
-  blurb:    'Project delivery at TrueFan AI. Complex, multi-stakeholder programmes across aerospace, investment consulting and enterprise AI, delivered with an eye on where the business can grow.',
+  label:    `${site.role}, ${site.firm}`,
+  headline: ['Complex programmes, delivered on time,', 'with the numbers to prove it.'],
+  blurb:    'Five years of delivery across aerospace procurement, cross-border investment consulting and enterprise AI, in India and the UAE.',
 }
 
-// Heading of the two-column section on the home page and the capabilities section on About.
+// Heading of the capabilities section on About.
 export const identityHeading = ['Operational rigour.', 'Strategic impact.']
 
-// Four stats under the ticker.
-export const highlights = [
-  { num: '5+',       label: 'Years in delivery',     sub: 'Aerospace · Consulting · AI tech' },
-  { num: 'AED 1.7M', label: 'Revenue delivered',     sub: '11 months · Coral Wealth' },
-  { num: '₹20 Cr+',  label: 'Procurement portfolio', sub: 'KassTech Aerospace' },
-  { num: '6+',       label: 'Enterprise accounts',   sub: 'In parallel · TrueFan AI' },
+// Two result badges floating on the hero portrait (desktop and tablet).
+export const heroBadges = [
+  { num: 'AED 1.7M', label: 'revenue closed in 11 months' },
+  { num: '6+',       label: 'enterprise accounts at once' },
 ]
 
-// Scrolling ticker. `strong` is the number, `tail` the context.
-export const tickerItems = [
-  { strong: '1,000+ clients',  tail: '3 programmes · Coral Wealth' },
-  { strong: '70% cut',         tail: 'Operational cycle time · Salesforce' },
-  { strong: '35+ vendors',     tail: '5+ government agencies' },
-  { strong: '25% lift',        tail: 'Client retention · Power BI' },
-  { strong: '5 teams',         tail: '3 time zones' },
-  { strong: '4 countries',     tail: 'India · UK · US · UAE' },
-  { strong: '100% on time',    tail: 'Vendor delivery · 4 years' },
-  { strong: '10+ trade shows', tail: '100+ leads generated' },
+// Results bar under the hero: four numbers, each tied to where it happened.
+export const highlights = [
+  { num: 'AED 1.7M', label: 'Revenue closed in 11 months',    sub: 'Coral Wealth Investment, Dubai' },
+  { num: '₹20 Cr+',  label: 'Procurement portfolio directed', sub: 'KassTech Aerospace, 35+ vendors' },
+  { num: '25%',      label: 'Better client retention',        sub: 'Power BI reporting, Coral Wealth' },
+  { num: '6+',       label: 'Enterprise accounts at once',    sub: 'TrueFan AI, no missed deadlines' },
 ]
 
 // "Worked with" row in the hero, one entry per organisation on the Experience page.
-// Where `src` is null the name is set as a small wordmark instead of a logo.
-// TODO: logos for Coral Wealth, SPANCOM and Gulf Well Solutions.
-export const companyLogos = [
-  { name: 'TrueFan AI',              src: '/logos/truefan.png' },
-  { name: 'Coral Wealth',            src: null },
-  { name: 'KassTech Aerospace',      src: '/logos/kasstech-lockup.png' },
-  { name: 'Sharaf DG',               src: '/logos/sharafdg.png' },
-  { name: 'Gulf Well Solutions',     src: null },
-  { name: 'SPANCOM',                 src: null },
+// Set as typeset names so all six read the same.
+export const companyNames = [
+  'TrueFan AI',
+  'Coral Wealth',
+  'KassTech Aerospace',
+  'Sharaf DG',
+  'Gulf Well Solutions',
+  'SPANCOM',
 ]
 
-// Three featured projects. `to` must match a slug in projects.js.
+// "Where I fit": one card per kind of target role, each with her matching evidence.
+export const fitHeading = ['Three kinds of role.', 'The same track record.']
+export const fit = [
+  {
+    role: 'Delivery and Operations',
+    heading: 'Programmes that land on time, at scale.',
+    evidence: [
+      '₹20 Cr+ procurement portfolio, 35+ vendors, 100% on time',
+      '70% shorter cycle time through Salesforce automation',
+      'ISO 9001 Lead Auditor, Six Sigma Green Belt',
+    ],
+  },
+  {
+    role: "Founder's Office",
+    heading: 'A second pair of hands for the founder.',
+    evidence: [
+      "First point of contact between TrueFan's founders and clients",
+      'Weekly governance reviews and live reporting for leadership',
+      'AED 1.7M closed alongside running delivery',
+    ],
+  },
+  {
+    role: 'Customer Success',
+    heading: 'Clients who stay, and say so.',
+    evidence: [
+      '1,000+ clients served across four countries',
+      '25% better retention, 100% SLA adherence',
+      '6+ enterprise accounts at once, no missed deadlines',
+    ],
+  },
+]
+
+// Career timeline. The last entry is highlighted as current.
+export const careerHeading = ['From aerospace procurement to', 'enterprise AI delivery.']
+export const career = [
+  { years: '2017 – 2021', place: 'UPES, Dehradun',          note: 'B.Tech, Aerospace Engineering (Avionics)' },
+  { years: '2021 – 2025', place: 'KassTech Aerospace',      note: 'Manager (Applications). Procurement, tendering, ISO 9001 quality system.' },
+  { years: '2023 – 2024', place: 'IMT Dubai',               note: 'MBA, Operations Management. Internships at Sharaf DG, Gulf Well Solutions, SPANCOM.' },
+  { years: '2025',        place: 'Coral Wealth Investment', note: 'Project & Operations Manager. 1,000+ clients across four countries.' },
+  { years: '2026 – now',  place: 'TrueFan AI, Gurugram',    note: 'Project Delivery Manager. Enterprise AI video for 6+ brands in parallel.' },
+]
+
+// Three featured projects. `to` must match a slug in projects.js; the "My role" line comes from that project's `role`.
+// `fits` tags each project with the kind of role it speaks to.
 export const featured = [
   {
-    index: '01',
     client: 'TrueFan AI · enterprise clients',
     title: 'Six enterprise AI video accounts in parallel',
     blurb: 'One delivery owner for 6+ enterprise accounts across five sectors, accountable from kickoff to execution.',
     metricNum: '6+',
-    metricLabel: 'accounts run at once',
-    tags: ['Enterprise delivery', 'AI video', 'Stakeholder management'],
+    metricLabel: 'enterprise accounts run at once',
+    fits: ['Delivery', 'Customer Success'],
     to: '/projects/enterprise-ai-video-delivery',
   },
   {
-    index: '02',
     client: 'Coral Wealth Investment',
     title: 'Cross-border delivery for 1,000+ clients',
     blurb: 'Three client programmes across four countries, run to one governance model.',
     metricNum: 'AED 1.7M',
     metricLabel: 'revenue in 11 months',
-    tags: ['Programme governance', 'Cross-border delivery', 'SLA'],
+    fits: ["Founder's Office", 'Customer Success'],
     to: '/projects/cross-border-client-delivery',
   },
   {
-    index: '03',
     client: 'KassTech Aerospace',
     title: 'Salesforce automation in aerospace procurement',
-    blurb: 'Redesigned the operating process and automated it in Salesforce.',
+    blurb: 'Redesigned the operating process, then automated it in Salesforce.',
     metricNum: '70%',
     metricLabel: 'cycle time reduced',
-    tags: ['Salesforce', 'Process redesign', 'Procurement'],
+    fits: ['Operations'],
     to: '/projects/salesforce-procurement-automation',
   },
 ]
 
-// Two columns, seven bullets each.
-export const identityColumns = [
-  {
-    num: '01',
-    heading: 'Core Delivery',
-    items: [
-      'Programme and multi-project governance',
-      'Enterprise account delivery',
-      'Founder and stakeholder communication',
-      'Scope, risk and budget control',
-      'SLA and service governance',
-      'Vendor and procurement management',
-      'Executive reporting',
-    ],
-  },
-  {
-    num: '02',
-    heading: "Operator's Edge",
-    items: [
-      'Six Sigma Green Belt',
-      'ISO 9001:2015 Lead Auditor (SGS)',
-      'Salesforce workflow automation',
-      'Power BI and MIS dashboards',
-      'AI-assisted reporting with ChatGPT, Claude and Gemini',
-      'Tendering and bid management',
-      'Business development alongside delivery',
-    ],
-  },
+// "In practice" card under How I work: one anonymised work sample (a weekly governance report,
+// RAID log or dashboard, client names removed). Hidden until `image` is set.
+// TODO: an image in /public (e.g. '/work-sample.png'), a title and a one-line caption.
+export const workSample = {
+  image:   null,
+  alt:     'TODO: what the image shows',
+  title:   'TODO: e.g. The weekly review leadership actually reads',
+  caption: 'TODO: one line on what it is and what it changed',
+}
+
+// Credentials strip: four headline credentials. The Credentials page lists all of them.
+export const credentialHighlights = [
+  { title: 'Six Sigma Green Belt',              meta: 'International Six Sigma Institute · 2025' },
+  { title: 'ISO 9001:2015 Lead Auditor',        meta: 'SGS · 2021' },
+  { title: 'MBA, Operations Management',        meta: 'IMT Dubai · 2024' },
+  { title: 'MicroMasters, Business Management', meta: 'IIM Bangalore via edX · 2023' },
 ]

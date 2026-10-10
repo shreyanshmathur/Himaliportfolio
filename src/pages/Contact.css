@@ -1,74 +1,72 @@
-/* ── CONTACT ─────────────────────────────────── */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 360px;
-  gap: 64px;
-  align-items: start;
+/* ── CONTACT ─────────────────────────────────────
+   PageHero and LetsTalk share one green surface (the dot texture
+   lives on the page wrapper so it runs unbroken across both).
+   ─────────────────────────────────────────────── */
+.ct-page {
+  background-color: var(--green-900);
+  background-image: radial-gradient(rgba(243,241,232,0.07) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.ct-page .page-hero,
+.ct-page .lets-talk {
+  background-color: transparent;
+  background-image: none;
+}
+.ct-page .page-hero { padding-bottom: 0; }
+.ct-page .page-hero::after { top: -240px; }
+
+/* LetsTalk continues the hero: drop its repeated headline, keep the list and actions. */
+.ct-page .lets-talk { padding-top: 56px; }
+.ct-page .lt-head { display: none; }
+.ct-page .lt-body {
+  margin-top: 0;
+  padding-top: 48px;
+  border-top: 1px solid rgba(243,241,232,0.16);
 }
 
-.contact-headline {
-  font-family: var(--serif);
-  font-size: clamp(48px, 6vw, 80px);
-  line-height: 0.95;
-  letter-spacing: -0.022em;
-  margin: 0;
-  color: var(--ink);
-}
-.contact-headline em { font-style: italic; color: var(--accent); }
-
-.contact-blurb {
-  font-size: 18px;
-  color: var(--ink-2);
-  margin: 28px 0 36px;
-  max-width: 520px;
-  line-height: 1.6;
-}
-
-.contact-actions {
+/* Direct details */
+.ct-direct {
+  list-style: none;
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
-}
-
-/* Contact list / table */
-.contact-list {
-  border-top: 1px solid var(--ink);
-}
-.contact-row {
-  display: grid;
-  grid-template-columns: 90px 1fr 16px;
   gap: 12px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-  align-items: baseline;
-  text-decoration: none;
-  color: var(--ink);
-  cursor: pointer;
-  transition: padding-left var(--dur) var(--ease);
+  margin-top: 8px;
 }
-.contact-row:hover { padding-left: 8px; }
-.contact-row:hover .ext { color: var(--accent); }
-.contact-row.no-link { cursor: default; }
-.contact-row.no-link:hover { padding-left: 0; }
-.contact-row .k {
-  font-family: var(--mono);
-  font-size: 11px;
+.ct-direct li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 44px;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: rgba(243,241,232,0.06);
+  border: 1px solid rgba(243,241,232,0.16);
+}
+.ct-direct-k {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--ink-4);
+  color: var(--mint);
 }
-.contact-row .v {
-  font-family: var(--sans);
-  font-size: 15px;
-  font-weight: 500;
+.ct-direct-v {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--on-green);
+  overflow-wrap: anywhere;
 }
-.contact-row .ext {
-  font-family: var(--mono);
-  color: var(--ink-4);
-  transition: color var(--dur) var(--ease);
+a.ct-direct-v {
+  text-decoration: underline;
+  text-decoration-color: rgba(243,241,232,0.35);
+  text-underline-offset: 4px;
+  transition: color var(--dur) var(--ease), text-decoration-color var(--dur) var(--ease);
 }
+a.ct-direct-v:hover { color: var(--mint); text-decoration-color: currentColor; }
 
-/* ── Responsive ──────────────────────────────── */
-@media (max-width: 960px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+@media (max-width: 640px) {
+  .ct-page .lets-talk { padding-top: 40px; }
+  .ct-page .lt-body { padding-top: 32px; }
+  .ct-page .lt-panel { order: -1; }
+  .ct-direct { flex-direction: column; gap: 8px; }
+  .ct-direct li { padding: 10px 14px; }
 }
